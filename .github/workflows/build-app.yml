@@ -1,15 +1,13 @@
 name: Build my application
 
-on:
-  push:
-    branches: [ "main" ]
+on: push
 
 jobs:
   build:
     name: Build app
     runs-on: ubuntu-latest 
     steps:
-    - name: Print current Dir
-      run: pwd
+    - name: Pull repo
+      uses: actions/checkout@v4.1.7
     - name: List files in dir
       run: ls
