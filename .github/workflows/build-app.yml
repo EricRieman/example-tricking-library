@@ -15,6 +15,6 @@ jobs:
       working-directory: TrickingLibrary.API
     
     - name: Build client
-      run: npm run build --if-present
-      working-directory: TrickingLibrary.Client
+      run: npm run build
+      working-directory: TrickingLibrary.client
       
