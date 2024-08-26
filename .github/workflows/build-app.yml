@@ -13,6 +13,10 @@ jobs:
     - name: Build server
       run: dotnet build
       working-directory: TrickingLibrary.API
+
+    - name: Install client dependencies
+      run: npm install
+      working-directory: TrickingLibrary.client
     
     - name: Build client
       run: npm run build
