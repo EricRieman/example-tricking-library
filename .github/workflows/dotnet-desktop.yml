@@ -1,0 +1,15 @@
+name: Build my application
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build app
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Print current Dir
+      run: pwd
+    - name: List files in dir
+      run: ls
