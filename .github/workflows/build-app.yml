@@ -9,5 +9,12 @@ jobs:
     steps:
     - name: Pull repo
       uses: actions/checkout@v4.1.7
-    - name: List files in dir
-      run: ls
+        
+    - name: Build server
+      run: dotnet build
+      working-directory: TrickingLibrary.API
+    
+    - name: Build client
+      run: npm run build --if-present
+      working-directory: TrickingLibrary.Client
+      
